@@ -35,20 +35,9 @@ hbs.registerHelper('screamIt', (text) => {
   return text.toUpperCase();
 });
 
-app.get('/', (req, res) => {
-  // res.send('<h1>Hello Express!</h1>');
-  res.send({
-    Name: 'Lucien',
-    Likes: [
-      'handball',
-      'coding',
-      'rap music'
-    ]
-  });
-});
 
-app.get('/home', (req, res) => {
-  res.render('about.hbs', {
+app.get('/', (req, res) => {
+  res.render('home.hbs', {
     pageTitle: 'Home Page',
     welcomeText: 'Welcome to this new website!'
   });
